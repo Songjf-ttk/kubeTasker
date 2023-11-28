@@ -1,7 +1,7 @@
 PACKAGE=github.com/kubeTasker/kubeTasker
 CURRENT_DIR=$(shell pwd)
 DIST_DIR=${CURRENT_DIR}/dist
-IMAGE_NAMESPACE=kubetasker
+IMAGE_NAMESPACE=songjunfan
 
 VERSION=$(shell cat ${CURRENT_DIR}/VERSION)
 BUILD_DATE=$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')

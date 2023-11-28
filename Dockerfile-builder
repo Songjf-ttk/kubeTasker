@@ -1,4 +1,4 @@
-FROM golang:1.18.0 as builder
+FROM golang:1.20.0 as builder
 
 RUN apt-get update && apt-get install -y \
     git \
@@ -12,3 +12,10 @@ RUN apt-get update && apt-get install -y \
 RUN git config --global --add safe.directory /root/go/src/github.com/kubeTasker/kubeTasker
 
 WORKDIR /tmp
+
+WORKDIR /go/src/github.com/kubeTasker/tasker-workflows
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+
+COPY . .

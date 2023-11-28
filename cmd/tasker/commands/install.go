@@ -32,7 +32,7 @@ import (
 var (
 	// These values may be overridden by the link flags during build
 	// (e.g. imageTag will use the official release tag on tagged builds)
-	imageNamespace = "kubetasker"
+	imageNamespace = "songjunfan"
 	imageTag       = "latest"
 
 	// These are the default image names which `tasker install` uses during install
